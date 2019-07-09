@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.smart.entity.GoodsTypeEntity" table="goods_type" schema="goods_base">
+        <id name="id">
+            <column name="id" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="goodsId">
+            <column name="goods_id" sql-type="char(32)" length="32"/>
+        </property>
+        <property name="color">
+            <column name="color" sql-type="varchar(64)" length="64" not-null="true"/>
+        </property>
+        <property name="smallImageUrl">
+            <column name="small_image_url" sql-type="varchar(64)" length="64" not-null="true"/>
+        </property>
+        <property name="categoryId">
+            <column name="category_id" sql-type="char(32)" length="32"/>
+        </property>
+    </class>
+</hibernate-mapping>

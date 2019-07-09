@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.smart.entity.UserLogginInfoEntity" table="user_loggin_info" schema="user_base">
+        <id name="id">
+            <column name="id" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="logginIp">
+            <column name="loggin_ip" sql-type="varchar(255)"/>
+        </property>
+        <property name="logginInTime">
+            <column name="loggin_in_time" sql-type="datetime"/>
+        </property>
+        <property name="logginOutTime">
+            <column name="loggin_out_time" sql-type="datetime"/>
+        </property>
+        <property name="userId">
+            <column name="user_id" sql-type="char(32)" length="32"/>
+        </property>
+    </class>
+</hibernate-mapping>

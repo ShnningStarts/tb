@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.smart.entity.GoodsEvaluationsEntity" table="goods_evaluations" schema="goods_base">
+        <id name="id">
+            <column name="id" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="userId">
+            <column name="user_id" sql-type="int(11)"/>
+        </property>
+        <property name="userName">
+            <column name="user_name" sql-type="varchar(255)"/>
+        </property>
+        <property name="userGrade">
+            <column name="user_Grade" sql-type="enum('1', '2', '4', '5', '3', '')"/>
+        </property>
+        <property name="userImageUrl">
+            <column name="user_image_url" sql-type="varchar(64)" length="64" not-null="true"/>
+        </property>
+        <property name="userVideoUrl">
+            <column name="user_video_url" sql-type="varchar(64)" length="64" not-null="true"/>
+        </property>
+        <property name="userDescription">
+            <column name="user_description" sql-type="varchar(255)" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

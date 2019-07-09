@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="property">
+<class name="com.smart.entity.RoleEntity" table="role" schema="user_base">
+    <id name="id">
+        <meta attribute="scope-set">private</meta>
+        <generator class="native"></generator>
+        <column name="id" sql-type="char(32)" length="32"></column>
+    </id>
+    <property name="normalUser" column="normal_user"></property>
+    <property name="userId"column="user_id"></property>
+    <property name="admin" column="admin"></property>
+    <property name="business" column="business"></property>
+</class>
+</hibernate-mapping>

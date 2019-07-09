@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.smart.entity.TrolleyEntity">
+        <table name="trolley" schema="user_base" catalog=""/>
+        <attributes>
+            <id name="id">
+                <column name="id" length="32"/>
+            </id>
+            <basic name="userId">
+                <column name="user_id" length="32"/>
+            </basic>
+            <basic name="goodsId">
+                <column name="goods_id" length="32"/>
+            </basic>
+            <basic name="goodsName">
+                <column name="goods_name" length="64"/>
+            </basic>
+            <basic name="goodsDescription">
+                <column name="goods_description"/>
+            </basic>
+            <basic name="mapId">
+                <column name="map_id" length="32"/>
+            </basic>
+            <basic name="mapName">
+                <column name="map_name" length="64"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

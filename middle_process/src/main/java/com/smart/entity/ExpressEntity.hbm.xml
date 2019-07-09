@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.smart.entity.ExpressEntity" table="express" schema="middle_process">
+        <id name="id">
+            <column name="id" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="state">
+            <column name="state" sql-type="enum('finish', 'started', 'broke', 'notstart')"/>
+        </property>
+        <property name="currentAddress">
+            <column name="current_address" sql-type="varchar(64)" length="64"/>
+        </property>
+        <property name="sendTelephone">
+            <column name="send_telephone" sql-type="char(11)" length="11"/>
+        </property>
+        <property name="sendAdd">
+            <column name="send_add" sql-type="varchar(255)"/>
+        </property>
+        <property name="reciveAddress">
+            <column name="recive_address" sql-type="varchar(64)" length="64"/>
+        </property>
+        <property name="reciveTelephone">
+            <column name="recive_telephone" sql-type="char(11)" length="11"/>
+        </property>
+        <property name="passedTime">
+            <column name="passed_time" sql-type="datetime"/>
+        </property>
+        <property name="finishTime">
+            <column name="finish_time" sql-type="datetime"/>
+        </property>
+    </class>
+</hibernate-mapping>

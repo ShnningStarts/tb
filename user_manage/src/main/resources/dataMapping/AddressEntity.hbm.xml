@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping default-access="property" schema="user_base">
+
+    <class name="com.smart.entity.AddressEntity" table="address" schema="user_base">
+        <id name="id"   >
+            <meta attribute="scope-set">private</meta>
+            <generator class="native" />
+            <column name="id" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="createTime" type="timestamp" >
+            <column name="create_time" sql-type="datetime"/>
+        </property>
+        <property name="deleteTime" type="timestamp">
+            <column name="delete_time" sql-type="datetime"/>
+        </property>m
+
+        <property name="coutry">
+            <column name="coutry" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="city">
+            <column name="city" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="provice">
+            <column name="provice" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="area">
+            <column name="area" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="detailAdd">
+            <column name="detail_add" sql-type="varchar(255)"/>
+        </property>
+        <property name="myPhone" type="java.lang.String" >
+            <column name="my_phone"></column>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.smart.entity.PayEntity" table="pay" schema="middle_process">
+        <id name="id">
+            <column name="id" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="payStartTime">
+            <column name="pay_start_time" sql-type="datetime"/>
+        </property>
+        <property name="payMoney">
+            <column name="pay_money" sql-type="decimal(5,2)" precision="5" scale="2"/>
+        </property>
+        <property name="userId">
+            <column name="user_id" sql-type="char(32)" length="32"/>
+        </property>
+        <property name="businessId">
+            <column name="business_id" sql-type="char(32)" length="32"/>
+        </property>
+        <property name="orderId">
+            <column name="order_id" sql-type="char(32)" length="32"/>
+        </property>
+    </class>
+</hibernate-mapping>

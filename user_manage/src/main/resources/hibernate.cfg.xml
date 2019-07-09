@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mariadb://localhost:3306/user_base</property>
+    <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+      <mapping class="com.smart.entity.AddressEntity"/>
+      <mapping resource="dataMapping/AddressEntity.hbm.xml"/>
+      <mapping class="com.smart.entity.Role"/>
+      <mapping resource="dataMapping/RoleEntity.hbm.xml"/>
+      <mapping class="com.smart.entity.UserBaseEntity"/>
+      <mapping resource="dataMapping/UserBaseEntity.hbm.xml"/>
+      <mapping class="com.smart.entity.UserChangeInfoEntity"/>
+      <mapping resource="dataMapping/UserChangeInfoEntity.hbm.xml"/>
+      <mapping class="com.smart.entity.UserLogginInfoEntity"/>
+      <mapping resource="dataMapping/UserLogginInfoEntity.hbm.xml"/>
+      <mapping class="com.smart.entity.RoleEntity"/>
+      <mapping resource="dataMapping/RoleEntity.hbm.xml"/>
+      <!-- <property name="connection.username"/> -->
+
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

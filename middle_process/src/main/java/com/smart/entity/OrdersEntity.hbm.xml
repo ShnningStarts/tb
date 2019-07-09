@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.smart.entity.OrdersEntity" table="orders" schema="middle_process">
+        <id name="id">
+            <column name="id" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="goodsName">
+            <column name="goods_name" sql-type="varchar(64)" length="64"/>
+        </property>
+        <property name="goodsNumber">
+            <column name="goods_number" sql-type="int(2)"/>
+        </property>
+        <property name="userName">
+            <column name="user_name" sql-type="varchar(64)" length="64"/>
+        </property>
+        <property name="userId">
+            <column name="user_id" sql-type="char(32)" length="32"/>
+        </property>
+        <property name="mailId">
+            <column name="mail_id" sql-type="char(32)" length="32" not-null="true"/>
+        </property>
+        <property name="mailName">
+            <column name="mail_name" sql-type="varchar(255)"/>
+        </property>
+        <property name="state">
+            <column name="state" sql-type="enum('payed', 'unpayed')"/>
+        </property>
+        <property name="startTime">
+            <column name="start_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="finishTime">
+            <column name="finish_time" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="goodsId">
+            <column name="goods_id" sql-type="char(32)" length="32" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

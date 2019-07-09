@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.smart.entity.UserChangeInfoEntity" table="user_change_info" schema="user_base">
+        <id name="id">
+            <column name="id" sql-type="char(32)" length="32"/>
+        </id>
+        <property name="changeIp">
+            <column name="change_ip" sql-type="char(32)" length="32"/>
+        </property>
+        <property name="changeWhat">
+            <column name="change_what" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="changeTime">
+            <column name="change_time" sql-type="datetime"/>
+        </property>
+        <property name="oldValue">
+            <column name="old_value" sql-type="varchar(128)" length="128" not-null="true"/>
+        </property>
+        <many-to-one name="userBaseByUserId" class="com.smart.entity.UserBaseEntity">
+            <column name="user_id"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

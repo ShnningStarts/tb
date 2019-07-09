@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.smart.entity.AddressEntity">
+        <table name="address" schema="user_base" catalog=""/>
+        <attributes>
+            <basic name="userId">
+                <column name="user_id" length="32"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
